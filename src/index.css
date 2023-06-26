@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html{
+  scroll-behavior:smooth;
+  overflow-x: hidden;
+  font-family: Lato, sans-serif;
+}
+
+element {
+  --main-bg-color: rgb(77,11,45);
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('./assets/futura-pt-demi.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('./assets/futura-pt-book.ttf');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./assets/latoregular.woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  color: #eaeef5;
+}
+a {
+  text-decoration: none;
+  color: #eaeef5;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.main-phrase {
+  font-size: 6rem;
+  margin-left: -7px;
+  display: block;
+  font-family: 'Futura';
+}
+
+.content {
+  position: relative;
+    max-width: 900px;
+  margin: 0 auto;
+}
+
+.podlozhka {
+  background-color: var(--main-purple-color);
+}
+.slogan {
+  display: flex;
+  justify-content: space-between;
+}
+.slogan span {
+  font-family: 'Futura';
+}
+.slogan-item {
+  width: 20%;
+  gap: 1rem;
+}
+.welcome {
+  margin-top: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10rem;
+}
+
+.welcome img {
+  max-width: 50%;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  cursor: grab;
+}
+
+.slide {
+  border-radius: .5rem;
+  width: 100%;
+}
+
+.slide-hidden {
+  display: none;
+}
+
+.arrow {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  color: white;
+}
+.arrow:hover {
+  cursor: pointer;
+}
+.arrow-left {
+  left: 1rem;
+}
+.arrow-right {
+  right: 1rem;
+}
+.indicators {
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+}
+
+.indicator {
+  background-color: white;
+  height: .5rem;
+  width: .5rem;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  margin: 0 0.2rem;
+  cursor: pointer;
+}
+
+.indicator-inactive {
+  background-color: grey;
+}
+.item {
+  width: 100%;
+}
+.item img {
+  width: 300px;
+  pointer-events: none;
+}
+.motion-carousel {
+  cursor: grab;
+  overflow: hidden;
+}
+
+.inner-carousel {
+  display: flex;
+  gap: 1rem;
+}
+.small-logo {
+  display: block;
+  max-width: 10%;
+  /* left: 0; */
+  /* top: 12px; */
+  z-index: 2;
+}
+
+.stars {
+  position: relative;
+  background: url('./assets/stars.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  margin: 150px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.inner-stars {
+  position: absolute;
+  width: 350px;
+  background: rgba(0,0,0,.3);
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  z-index: 1;
+  background-blend-mode: revert;
+}
+.inner-stars-text{
+  font-family: 'Futura';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 -100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.inner-stars-text p {
+  margin: 0;
+}
+
+
+.inner-stars-text p:first-child {
+  font-size: 1.45rem;
+  opacity: .85;
+  font-weight: 100;
+}
+.inner-stars-text p:nth-child(2) {
+  font-size: 4.2rem;
+}
+
+.dj-header {
+  display: flex;
+  gap: 10rem;
+  align-items: center;
+  font-family: 'Futura';
+}
+.dj-header p {
+  letter-spacing: .2rem;
+  opacity: .7;
+}
+
+.dj {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.dj-wrapper {
+  background: linear-gradient(black, rgb(77,11,45), black);
+  padding: 3rem;
+}
+
+.dj-item {
+  display: flex;
+  gap: 2rem;
+}
+
+.dj-item img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.dj-info {
+  display: flex;
+  flex-direction: column;
+}
+.dj-info h2 {
+  margin-top: 0;
+}
+.dj-info p {
+  margin-top: 0;
+  opacity: .7;
+}
+
+.programa {
+  margin-top: 50px;
+}
+
+.line {
+  margin: 20px auto;
+  height: 2px;
+  background: linear-gradient(to right, rgba(255,255,255,.1), rgba(255,255,255, 1), rgba(255,255,255,.1));
+  opacity: .5;
+}
+
+.sponsors {
+  display: flex;
+  gap: 10rem;
+  align-items: space-between;
+  align-items: center;
+  margin-top: 150px;
+}
+.sponsors-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+}
+.map {
+  opacity: .9;
+  max-width: 90%;
+  margin: 0 auto;
+  display: block;
+  cursor: zoom-in;
+}
+
+.contacts {
+  margin: 150px 0 0;
+  display: flex;
+  gap: 5rem;
+}
+.contacts-info p {
+  width: 300px;
+  opacity: .8;
+}
+
+.footer {
+  position: absolute;
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin:  0 auto;
+  padding-bottom: 40px;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  aspect-ratio: 9/1;
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    flex-direction: column;
+  }
+  .sponsors {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .slogan {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .slogan-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: auto;
+  }
+  .slogan-item p {
+    margin: 0;
+  }
+  .content {
+    padding: 2rem;
+  }
+  .welcome{
+    flex-direction: column;
+  }
+  .welcome img {
+    max-width: 100%;
+  }
+  .dj {
+    grid-template-columns: 1fr;
+  }
+  .dj-header {
+    display: block;
+    text-align: center;
+  }
+  .inner-stars {
+    width: 40%;
+  }
+  .inner-stars-text p:first-child {
+    font-size: 4vw;
+  }
+  .inner-stars-text p:nth-child(2) {
+    font-size: 5vw;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .contacts {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .dj-item {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main-phrase {
+    font-size: 3rem;
+    margin-left: 0;
+  }
+  .content {
+    word-wrap: break-word;
+  }
+  .inner-stars {
+    width: 30%;
+  }
+}
